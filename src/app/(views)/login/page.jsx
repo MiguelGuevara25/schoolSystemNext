@@ -1,9 +1,12 @@
-import React from 'react'
+import Link from "next/link";
+import React from "react";
 
 const page = () => {
   return (
-    <div>Acá será el Login</div>
-  )
-}
+    <div>
+      <Link href="/dashboard">Dashboard</Link>
+    </div>
+  );
+};
 
-export default page
+export default page;
