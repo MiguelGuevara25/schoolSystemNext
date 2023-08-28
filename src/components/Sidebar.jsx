@@ -1,18 +1,14 @@
 import React from "react";
-
 const Sidebar = () => {
   return (
-    <aside className="w-1/5 min-h-screen bg-zinc-300 p-5 rounded-r-lg">
-      <div>
-        <div className="flex gap-10 items-center">
-          <div className="text-white bg-black w-20 h-20 rounded-full"></div>
+    <aside className="min-h-screen bg-primary p-5 rounded-r-lg">
+      <div className="flex gap-6 items-center">
+        <div className="bg-black w-20 h-20 rounded-full"></div>
 
-          <div>
-            <p className="font-semibold">
-              Benito Camela <br /> Elver Galarga
-            </p>
-            <p className="font-bold text-zinc-400">Profesor</p>
-          </div>
+        <div>
+          <p className="font-semibold text-white">
+            Benito Camela <br /> Elver Galarga
+          </p>
         </div>
       </div>
     </aside>
