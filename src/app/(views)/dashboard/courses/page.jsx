@@ -1,9 +1,8 @@
 import Navbar from "@/app/components/Navbar";
 import Sidebar from "@/app/components/Sidebar";
-import Content from "./components/Content";
-import Courses from "./courses/page";
+import Courses from "../components/Courses";
 
-const Dashboard = () => {
+export default function CoursesPage() {
   return (
     <>
       <Navbar />
@@ -14,11 +13,9 @@ const Dashboard = () => {
         </div>
 
         <div className="w-4/5">
-          <Content />
+          <Courses />
         </div>
       </div>
     </>
   );
-};
-
-export default Dashboard;
+}

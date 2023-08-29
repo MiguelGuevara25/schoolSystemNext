@@ -1,4 +1,5 @@
-import React from "react";
+import Link from "next/link";
+
 const Sidebar = () => {
   return (
     <aside className="min-h-screen bg-primary p-5 rounded-r-lg">
@@ -11,6 +12,19 @@ const Sidebar = () => {
           </p>
         </div>
       </div>
+
+      <nav className="text-white">
+        <Link href="/dashboard">
+          <p>Inicio</p>
+        </Link>
+
+        <Link href="/dashboard/courses">
+          <p>Cursos</p>
+        </Link>
+
+        <p>Profesores</p>
+        <p>Alumnos</p>
+      </nav>
     </aside>
   );
 };
