@@ -1,5 +1,5 @@
 "use client";
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 const SchoolContext = createContext();
 
@@ -17,7 +17,9 @@ const SchoolProvider = ({ children }) => {
   const [direccion, setDireccion] = useState("");
   const [alumnos, setAlumnos] = useState(INITIAL);
 
-  localStorage.setItem("AlumnosMatriculados", JSON.stringify(alumnos));
+  useEffect(() => {
+    localStorage.setItem("AlumnosMatriculados", JSON.stringify(alumnos));
+  }, [alumnos]);
 
   return (
     <SchoolContext.Provider
