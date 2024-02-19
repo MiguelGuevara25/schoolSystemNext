@@ -1,16 +1,15 @@
 "use client";
 import useSchool from "@/hooks/useSchool";
 
-export default function Page3eroSecundaria() {
+export default function Page1roPrimaria() {
   const { alumnos } = useSchool();
 
   return (
     <div>
-      <p>Alumnos de 3ero Secundaria</p>
+      <p>Alumnos de 1ro Primaria</p>
       {alumnos
         .filter(
-          (alumno) =>
-            alumno.nivel === "secundaria" && alumno.grado === "3grado_s"
+          (alumno) => alumno.nivel === "primaria" && alumno.grado === "1grado_p"
         )
         .map((alumno) => (
           <div key={alumno.id}>

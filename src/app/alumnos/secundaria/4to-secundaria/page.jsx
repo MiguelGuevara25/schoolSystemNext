@@ -10,7 +10,7 @@ export default function Page4toSecundaria() {
       {alumnos
         .filter(
           (alumno) =>
-            alumno.nivel === "secundaria" && alumno.grado === "4° Secundaria"
+            alumno.nivel === "secundaria" && alumno.grado === "4grado_s"
         )
         .map((alumno) => (
           <div key={alumno.id}>
