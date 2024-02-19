@@ -24,6 +24,7 @@ export default function PageMatricula() {
     setDireccion,
     dni,
     setDni,
+    seccAleatorio,
   } = useSchool();
 
   const optionNivel = (nivel) => {
@@ -90,8 +91,19 @@ export default function PageMatricula() {
         nivel,
         grado,
         direccion,
+        seccion: seccAleatorio,
       },
     ]);
+
+    setDni("");
+    setNombre("");
+    setApellidoPaterno("");
+    setApellidoMaterno("");
+    setSexo("");
+    setFechaNacimiento("");
+    setNivel("");
+    setGrado("");
+    setDireccion("");
   };
 
   return (
@@ -189,6 +201,21 @@ export default function PageMatricula() {
           Matricular
         </button>
       </form>
+
+      <div className="flex flex-wrap mt-5">
+        {alumnos.map((al) => {
+          return (
+            <div key={al.id} className="py-5 border basis-1/2">
+              <p>{al.dni}</p>
+              <h3>{al.nombre}</h3>
+              <p>
+                {al.apellidoPaterno} {al.apellidoMaterno}
+              </p>
+              <p>Sección: {al.seccion}</p>
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

@@ -15,10 +15,15 @@ const SchoolProvider = ({ children }) => {
   const [direccion, setDireccion] = useState("");
   const [alumnos, setAlumnos] = useState([]);
 
+  const secciones = ["A", "B", "C", "D"];
+
+  const aleatorio = Math.floor(Math.random() * secciones.length);
+  const seccAleatorio = secciones[aleatorio];
+
   useEffect(() => {
     const item = localStorage.getItem("AlumnosMatriculados");
     const alumnos = JSON.parse(item);
-    if (alumnos) {
+    if (alumnos.length > 0) {
       setAlumnos(alumnos);
     }
   }, []);
@@ -50,6 +55,7 @@ const SchoolProvider = ({ children }) => {
         setDireccion,
         dni,
         setDni,
+        seccAleatorio,
       }}
     >
       {children}

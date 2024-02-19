@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import Inicial from "../components/Inicial";
 import Secundaria from "../components/Secundaria";
 import Primaria from "../components/Primaria";

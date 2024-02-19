@@ -18,6 +18,10 @@ const Navbar = () => {
           <Link href="/matricula">Matricula</Link>
         </li>
 
+        <li className="hover:bg-indigo-700 cursor-pointer">
+          <Link href="/cursos">Cursos</Link>
+        </li>
+
         <li className="hover:bg-indigo-700">
           <Link href="/notas">Notas</Link>
         </li>

@@ -2,6 +2,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { SchoolProvider } from "@/context/SchoolProvider";
 import Navbar from "./components/Navbar";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,11 +17,13 @@ export default function RootLayout({ children }) {
     <html lang="es">
       <body className={inter.className} style={{ display: "flex" }}>
         <SchoolProvider>
-          <header className="w-1/5">
-            <Navbar />
-          </header>
+          <Suspense fallback={Loading}>
+            <header className="w-1/5">
+              <Navbar />
+            </header>
 
-          <main className="w-4/5">{children}</main>
+            <main className="w-4/5">{children}</main>
+          </Suspense>
         </SchoolProvider>
       </body>
     </html>
