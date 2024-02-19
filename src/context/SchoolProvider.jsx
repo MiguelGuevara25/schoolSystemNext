@@ -18,7 +18,7 @@ const SchoolProvider = ({ children }) => {
   useEffect(() => {
     const item = localStorage.getItem("AlumnosMatriculados");
     const alumnos = JSON.parse(item);
-    if (alumnos.length > 0) {
+    if (alumnos) {
       setAlumnos(alumnos);
     }
   }, []);
